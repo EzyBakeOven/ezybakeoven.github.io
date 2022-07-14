@@ -9,6 +9,8 @@ import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import CareerHistory from '../../data/career-history.json';
+import OutlinedCard from './career-experience-card';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -24,10 +26,10 @@ export default function CareerTimeline() {
 
   return (
     <Timeline align="alternate">
-      <TimelineItem>
+      {CareerHistory.map(career => { return (<TimelineItem>
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
-            2 years
+          { career.duration }
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -37,50 +39,15 @@ export default function CareerTimeline() {
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Consunet
+              { career.organisationName }
             </Typography>
-            <Typography>Junior Software Engineer</Typography>
+            <Typography>{ career.role }</Typography>
+            {/* <OutlinedCard career={career}></OutlinedCard> */}
           </Paper>
         </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            10 months
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-        <TimelineDot variant="outlined" color="primary" />
-        <TimelineConnector className={classes.secondaryTail} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Department of Defence, Science and Technology
-            </Typography>
-            <Typography>Junior Software Engineer</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-      <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            1 year 3 months
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-        <TimelineDot variant="outlined" color="primary" />
-          <TimelineConnector className={classes.secondaryTail} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              SA Structural
-            </Typography>
-            <Typography>Junior Software Engineer</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
+      </TimelineItem>)
+        
+      })}
     </Timeline>
   );
 }

@@ -27,10 +27,10 @@ export default function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header />
+      <Header id="particle-header" />
       <main
         style={{
-          margin: "1em",
+          margin: "2em",
         }}
       >
         {children}

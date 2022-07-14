@@ -10,7 +10,6 @@ import CardContent from "@material-ui/core/CardContent"
 import Typography from "@material-ui/core/Typography"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
-import Button from "@material-ui/core/Button"
 
 const useStyles = makeStyles(theme => ({
   pos: {

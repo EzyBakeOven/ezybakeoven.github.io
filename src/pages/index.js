@@ -35,7 +35,7 @@ export default function IndexPage() {
             <PreferenceCard framework="Frontend" primary="Angular" secondary="React"></PreferenceCard>
           </Grid>
           <Grid item xs={6} sm={6} md={6}>
-            <PreferenceCard framework="Backend" primary="Spring" secondary="Micronaut"></PreferenceCard>
+            <PreferenceCard framework="Backend" primary="NestJS" secondary="Spring"></PreferenceCard>
           </Grid>
         </Grid>
       </div>

@@ -1,0 +1,80 @@
+[{
+        "organisationName": "Finder.com.au",
+        "duration": "Present",
+        "role": "Software Engineer",
+        "awards": [],
+        "experience": [
+            "Kotlin",
+            "Java",
+            "Akka",
+            "PhP",
+            "React",
+            "MySQL",
+            "Docker",
+            "AWS"
+        ]
+    },
+    {
+        "organisationName": "Qinetiq",
+        "duration": "8 months",
+        "role": "Software Engineer",
+        "awards": [
+            "Received Merit Award and bonus for excellence in customer relations."
+        ],
+        "experience": [
+            "Angular",
+            "GraphQL",
+            "Node",
+            "NestJs",
+            "Kafka",
+            "MongoDB",
+            "Docker",
+            "Elastic Search",
+            "Postgres",
+            "AWS"
+        ]
+    },
+    {
+        "organisationName": "Consunet",
+        "duration": "2 years",
+        "role": "Junior Software Engineer",
+        "awards": [
+            "Thank you letter from Joint and Operations Analysis Division."
+        ],
+        "experience": [
+            "Java",
+            "Akka",
+            "GraphQL",
+            "Spring",
+            "Docker",
+            "Helm",
+            "Elastic Search",
+            "Openshift"
+        ]
+    },
+    {
+        "organisationName": "Department of Defence, Science and Technology",
+        "duration": "10 months",
+        "role": "Junior Software Engineer",
+        "awards": [],
+        "experience": [
+            "Java",
+            "Spring",
+            "Angular",
+            "Postgres",
+            "Docker"
+        ]
+    },
+    {
+        "organisationName": "SA Structural",
+        "duration": "1 year 3 months",
+        "role": "Junior Software Engineer",
+        "awards": [],
+        "experience": [
+            "ASP.NET",
+            "PHP",
+            "C#",
+            "SQL"
+        ]
+    }
+]
