@@ -10,7 +10,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import CareerHistory from '../../data/career-history.json';
-import OutlinedCard from './career-experience-card';
+import CareerTabs from './career-tabs';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -37,17 +37,16 @@ export default function CareerTimeline() {
           <TimelineConnector className={classes.secondaryTail} />
         </TimelineSeparator>
         <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
+        <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
               { career.organisationName }
             </Typography>
             <Typography>{ career.role }</Typography>
-            {/* <OutlinedCard career={career}></OutlinedCard> */}
+            <CareerTabs career={career}></CareerTabs>
           </Paper>
         </TimelineContent>
-      </TimelineItem>)
-        
-      })}
+      </TimelineItem>
+      )})}
     </Timeline>
   );
 }

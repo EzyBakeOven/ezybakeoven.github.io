@@ -13,7 +13,9 @@ const Header = ({ siteTitle }) => {
   };
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    container.canvas.element.style.position="none"
+
+    console.log(container.canvas.element.style.position)
   };
   return (
     <header
@@ -73,6 +75,7 @@ const Header = ({ siteTitle }) => {
             enable: true,
           },
           move: {
+            decay: 0.01,
             direction: "none",
             enable: true,
             outModes: {

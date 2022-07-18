@@ -7,7 +7,7 @@
             "Kotlin",
             "Java",
             "Akka",
-            "PhP",
+            "PHP",
             "React",
             "MySQL",
             "Docker",
@@ -16,7 +16,7 @@
     },
     {
         "organisationName": "Qinetiq",
-        "duration": "8 months",
+        "duration": "9 months",
         "role": "Software Engineer",
         "awards": [
             "Received Merit Award and bonus for excellence in customer relations."
@@ -36,7 +36,7 @@
     },
     {
         "organisationName": "Consunet",
-        "duration": "2 years",
+        "duration": "2 years 2 months",
         "role": "Junior Software Engineer",
         "awards": [
             "Thank you letter from Joint and Operations Analysis Division."
@@ -45,6 +45,8 @@
             "Java",
             "Akka",
             "GraphQL",
+            "Angular",
+            "React",
             "Spring",
             "Docker",
             "Helm",

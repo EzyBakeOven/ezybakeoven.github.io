@@ -32,7 +32,7 @@ const ProfilePic = () => {
 
   return <Img 
     style={{
-      borderRadius: '80%',
+      borderRadius: '85%',
       border: '#1e1e1e .3em solid',
       width: '30vh',
       position: 'absolute',

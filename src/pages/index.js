@@ -21,7 +21,7 @@ export default function IndexPage() {
       <SEO title="Home" />
       <ProfilePic />
       <div className={classes.root}>
-        <Grid container justify="center" alignItems="center">
+        <Grid container>
           <Grid item xs={12} sm={12} md={3}>
             <OutlinedCard></OutlinedCard>
           </Grid>
@@ -30,7 +30,7 @@ export default function IndexPage() {
           </Grid>
         </Grid>
 
-        <Grid container justify="center" alignItems="center" spacing="3">
+        <Grid container justify="center" alignItems="center" spacing={3}>
           <Grid item xs={6} sm={6} md={6}>
             <PreferenceCard framework="Frontend" primary="Angular" secondary="React"></PreferenceCard>
           </Grid>
