@@ -13,9 +13,7 @@ const Header = ({ siteTitle }) => {
   };
 
   const particlesLoaded = (container) => {
-    container.canvas.element.style.position="none"
-
-    console.log(container.canvas.element.style.position)
+    container.canvas.element.style.position="relative"
   };
   return (
     <header
@@ -27,6 +25,7 @@ const Header = ({ siteTitle }) => {
 <Particles
       id="particle-header"
       height="30vh"
+      position="relative"
       width="100%"
       canvasClassName="particle-header-canvas"
       init={particlesInit}

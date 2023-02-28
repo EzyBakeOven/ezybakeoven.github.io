@@ -1,0 +1,25 @@
+.award-card {
+  display: inline-flex;
+  margin: 1em;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.award-card-parent {
+  display: inline-flex;
+}
+
+.award-icon {
+    color: gold;
+    float: left;
+    /* background-color: gray;
+    border-radius: 50%;
+    box-shadow:
+      0 0 6px 3px yellow,
+      0 0 10px 6px gold,
+      0 0 14px 9px goldenrod; */
+}
+
+.award-content {
+    float: right;
+}

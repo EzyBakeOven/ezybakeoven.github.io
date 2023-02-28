@@ -2,6 +2,7 @@
         "organisationName": "Finder.com.au",
         "duration": "Present",
         "role": "Software Engineer",
+        "dates": "Oct 2021 - Present",
         "awards": [],
         "experience": [
             "Kotlin",
@@ -18,6 +19,7 @@
         "organisationName": "Qinetiq",
         "duration": "9 months",
         "role": "Software Engineer",
+        "dates": "Feb 2021 - Oct 2021",
         "awards": [
             "Received Merit Award and bonus for excellence in customer relations."
         ],
@@ -38,6 +40,7 @@
         "organisationName": "Consunet",
         "duration": "2 years 2 months",
         "role": "Junior Software Engineer",
+        "dates": "Jan 2019 - Feb 2021",
         "awards": [
             "Thank you letter from Joint and Operations Analysis Division."
         ],
@@ -58,6 +61,7 @@
         "organisationName": "Department of Defence, Science and Technology",
         "duration": "10 months",
         "role": "Junior Software Engineer",
+        "dates": "Feb 2018 - Nov 2018",
         "awards": [],
         "experience": [
             "Java",
@@ -71,6 +75,7 @@
         "organisationName": "SA Structural",
         "duration": "1 year 3 months",
         "role": "Junior Software Engineer",
+        "dates": "Nov 2016 - Jan 2018",
         "awards": [],
         "experience": [
             "ASP.NET",

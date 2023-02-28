@@ -6,9 +6,9 @@
  */
 
 import React from "react"
-import useMediaQuery from "@material-ui/core/useMediaQuery"
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
-import CssBaseline from "@material-ui/core/CssBaseline"
+import useMediaQuery from "@mui/material/useMediaQuery"
+import { createTheme, ThemeProvider } from "@mui/material/styles"
+import CssBaseline from "@mui/material/CssBaseline"
 import Header from "./particle-header/header"
 
 export default function Layout({ children }) {
@@ -16,13 +16,14 @@ export default function Layout({ children }) {
 
   const theme = React.useMemo(
     () =>
-      createMuiTheme({
+      createTheme({
         palette: {
-          type: prefersDarkMode ? "dark" : "light",
+          mode: prefersDarkMode ? 'dark' : 'light',
         },
       }),
-    [prefersDarkMode]
-  )
+    [prefersDarkMode],
+  );
+  theme.spacing(2);
 
   return (
     <ThemeProvider theme={theme}>

@@ -1,17 +1,19 @@
 import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import List from "@material-ui/core/List"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
-import ListItemText from "@material-ui/core/ListItemText"
-import Divider from "@material-ui/core/Divider"
-import Card from "@material-ui/core/Card"
-import CardContent from "@material-ui/core/CardContent"
-import Typography from "@material-ui/core/Typography"
-import LinkedInIcon from "@material-ui/icons/LinkedIn"
-import GitHubIcon from "@material-ui/icons/GitHub"
+import {
+  experimental_extendTheme as extendTheme,
+} from '@mui/material/styles';
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+import ListItemIcon from "@mui/material/ListItemIcon"
+import ListItemText from "@mui/material/ListItemText"
+import Divider from "@mui/material/Divider"
+import Card from "@mui/material/Card"
+import CardContent from "@mui/material/CardContent"
+import Typography from "@mui/material/Typography"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import GitHubIcon from "@mui/icons-material/GitHub"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = extendTheme(theme => ({
   pos: {
     marginBottom: 12,
   },
@@ -26,7 +28,7 @@ function ListItemLink(props) {
 }
 
 export default function OutlinedCard() {
-  const classes = useStyles()
+  const classes = useStyles
 
   return (
     <Card variant="outlined">

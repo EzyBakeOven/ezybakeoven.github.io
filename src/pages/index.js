@@ -4,21 +4,21 @@ import ProfilePic from "../components/portrait/profile-pic"
 import SEO from "../components/seo"
 import OutlinedCard from "../components/title-card/title-card"
 import CareerTimeline from "../components/career-timeline/career-timeline"
-import { makeStyles } from "@material-ui/core/styles"
-import Grid from "@material-ui/core/Grid"
+import { experimental_extendTheme as extendTheme } from "@mui/material/styles"
+import Grid from "@mui/material/Grid"
 import PreferenceCard from "../components/preference-card/preference-card"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = extendTheme(theme => ({
   root: {
     flexGrow: 1,
   },
 }))
 
 export default function IndexPage() {
-  const classes = useStyles()
+  const classes = useStyles
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Software Engineer" description="Adelaide software engineer." lang="en-US" url="" />
       <ProfilePic />
       <div className={classes.root}>
         <Grid container>
