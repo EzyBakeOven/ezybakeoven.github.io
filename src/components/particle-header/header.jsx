@@ -103,7 +103,8 @@ const Header = ({ siteTitle }) => {
         },
         detectRetina: true,
         style: {
-          height: '30vh'
+          height: '30vh',
+          position: 'relative'
         }
       }}
     />
