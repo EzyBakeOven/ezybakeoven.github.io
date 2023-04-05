@@ -1,10 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: `Matt Hoy`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Resume of Senior Software Engineer working in Adelaide, South Australia.`,
     author: `@ezybakeoven`,
+    siteUrl: 'https://ezybakeoven.github.io/',
+    lang: 'en',
+    meta: []
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -13,6 +17,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
