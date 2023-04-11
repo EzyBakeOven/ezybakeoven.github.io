@@ -9,6 +9,7 @@ import CardContent from "@mui/material/CardContent"
 import Typography from "@mui/material/Typography"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
+import "./title-card.css";
 
 function ListItemLink(props) {
   return <ListItem component="a" {...props} />
@@ -16,7 +17,7 @@ function ListItemLink(props) {
 
 export default function TitleCard() {
   return (
-    <div className="relative z-5">
+    <div className="title-card">
       <Card variant="outlined">
         <CardContent>
           <Typography variant="h5" component="h1">

@@ -13,12 +13,11 @@ import CareerTabs from "./career-tabs"
 import "./career-timeline.css";
 
 export default function CareerTimeline() {
-
   return (
     <Timeline position="alternate">
-      {CareerHistory.map(career => {
+      {CareerHistory.map((career, index) => {
         return (
-          <TimelineItem key={career.organisationName}>
+          <TimelineItem key={index}>
             <TimelineOppositeContent color="text.secondary">
               {career.duration}
               <p>{career.dates}</p>

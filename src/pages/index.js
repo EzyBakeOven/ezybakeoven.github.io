@@ -19,7 +19,7 @@ export default function IndexPage() {
       <ProfilePic />
       <Grid container>
         <Grid item xs={12} sm={12} md={3}>
-          <TitleCard className="z-10"></TitleCard>
+          <TitleCard></TitleCard>
         </Grid>
         <Grid item xs={12} sm={12} md={9}>
           <CareerTimeline></CareerTimeline>
