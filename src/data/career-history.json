@@ -14,6 +14,9 @@
       "MySQL",
       "Docker",
       "AWS"
+    ],
+    "responsibilities": [
+      "Developed a data importer and exporter in kotlin for importing JSON and XML."
     ]
   },
   {
