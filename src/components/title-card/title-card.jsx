@@ -8,8 +8,9 @@ import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
 import Typography from "@mui/material/Typography"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import BakeryDiningIcon from "@mui/icons-material/BakeryDining"
 import GitHubIcon from "@mui/icons-material/GitHub"
-import "./title-card.css";
+import "./title-card.css"
 
 function ListItemLink(props) {
   return <ListItem component="a" {...props} />
@@ -44,6 +45,16 @@ export default function TitleCard() {
                 <GitHubIcon />
               </ListItemIcon>
               <ListItemText primary="GitHub" />
+            </ListItemLink>
+
+            <ListItemLink
+              href="https://croissants-adelaide.blogspot.com/"
+              target="_blank"
+            >
+              <ListItemIcon>
+                <BakeryDiningIcon></BakeryDiningIcon>
+              </ListItemIcon>
+              <ListItemText primary="Croissant Blog" />
             </ListItemLink>
           </List>
         </CardContent>

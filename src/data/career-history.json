@@ -4,19 +4,30 @@
     "duration": "Present",
     "role": "Senior Software Engineer",
     "dates": "April 2023 - Present",
-    "awards": [],
-    "experience": [
-      "Kotlin",
-      "Java",
-      "Akka",
-      "PHP",
-      "React",
-      "MySQL",
-      "Docker",
-      "AWS"
-    ],
-    "responsibilities": [
-      "Developed a data importer and exporter in kotlin for importing JSON and XML."
+    "tabs": [
+      { "label": "Awards", "items": [] },
+      {
+        "label": "Experience",
+        "items": [
+          "Kotlin",
+          "Java",
+          "Akka",
+          "PHP",
+          "React",
+          "MySQL",
+          "Docker",
+          "AWS",
+          "Datadog"
+        ]
+      },
+      {
+        "label": "Role Responsibilities",
+        "items": [
+          "Created project briefs for engineering work. This would outline project scope, success criteria, risks, ROI and dependencies.",
+          "Reviewed Code",
+          "Created and Reviewed technical designs"
+        ]
+      }
     ]
   },
   {
@@ -24,16 +35,30 @@
     "duration": "1 year 7 months",
     "role": "Software Engineer",
     "dates": "Oct 2021 - April 2023",
-    "awards": [],
-    "experience": [
-      "Kotlin",
-      "Java",
-      "Akka",
-      "PHP",
-      "React",
-      "MySQL",
-      "Docker",
-      "AWS"
+    "tabs": [
+      { "label": "Awards", "items": [] },
+      {
+        "label": "Experience",
+        "items": [
+          "Kotlin",
+          "Java",
+          "Akka",
+          "PHP",
+          "React",
+          "MySQL",
+          "Docker",
+          "AWS",
+          "Datadog"
+        ]
+      },
+      {
+        "label": "Responsibilities",
+        "items": [
+          "Supported and maintianed critical backend production system.",
+          "Lead Developement of a data importer and exporter in kotlin for importing JSON and XML. Which required rate limiting to stop overloading of dependant services.",
+          "Developed front end components from Figma created by design team using company design language."
+        ]
+      }
     ]
   },
   {
@@ -41,20 +66,34 @@
     "duration": "9 months",
     "role": "Software Engineer",
     "dates": "Feb 2021 - Oct 2021",
-    "awards": [
-      "Received Merit Award and bonus for excellence in customer relations."
-    ],
-    "experience": [
-      "Angular",
-      "GraphQL",
-      "Node",
-      "NestJs",
-      "Kafka",
-      "MongoDB",
-      "Docker",
-      "Elastic Search",
-      "Postgres",
-      "AWS"
+    "tabs": [
+      {
+        "label": "Awards",
+        "items": [
+          "Received Merit Award and bonus for excellence in customer relations."
+        ]
+      },
+      {
+        "label": "Experience",
+        "items": [
+          "Angular",
+          "GraphQL",
+          "Node",
+          "NestJs",
+          "Kafka",
+          "MongoDB",
+          "Docker",
+          "Elastic Search",
+          "Postgres",
+          "AWS"
+        ]
+      },
+      {
+        "label": "Responsibilities",
+        "items": [
+          "Lead developement of an information system used for Red Team information gathering."
+        ]
+      }
     ]
   },
   {
@@ -62,18 +101,32 @@
     "duration": "2 years 2 months",
     "role": "Junior Software Engineer",
     "dates": "Jan 2019 - Feb 2021",
-    "awards": ["Thank you letter from Joint and Operations Analysis Division."],
-    "experience": [
-      "Java",
-      "Akka",
-      "GraphQL",
-      "Angular",
-      "React",
-      "Spring",
-      "Docker",
-      "Helm",
-      "Elastic Search",
-      "Openshift"
+    "tabs": [
+      {
+        "label": "Awards",
+        "items": [
+          "Thank you letter from Joint and Operations Analysis Division."
+        ]
+      },
+      {
+        "label": "Experience",
+        "items": [
+          "Java",
+          "Akka",
+          "GraphQL",
+          "Angular",
+          "React",
+          "Spring",
+          "Docker",
+          "Helm",
+          "Elastic Search",
+          "Openshift"
+        ]
+      },
+      {
+        "label": "Responsibilities",
+        "items": []
+      }
     ]
   },
   {
@@ -81,15 +134,30 @@
     "duration": "10 months",
     "role": "Junior Software Engineer",
     "dates": "Feb 2018 - Nov 2018",
-    "awards": [],
-    "experience": ["Java", "Spring", "Angular", "Postgres", "Docker"]
+    "tabs": [
+      { "label": "Awards", "items": [] },
+      {
+        "label": "Experience",
+        "items": ["Java", "Spring", "Angular", "Postgres", "Docker"]
+      },
+      {
+        "label": "Responsibilities",
+        "items": []
+      }
+    ]
   },
   {
     "organisationName": "SA Structural",
     "duration": "1 year 3 months",
     "role": "Junior Software Engineer",
     "dates": "Nov 2016 - Jan 2018",
-    "awards": [],
-    "experience": ["ASP.NET", "PHP", "C#", "SQL"]
+    "tabs": [
+      { "label": "Awards", "items": [] },
+      { "label": "Experience", "items": ["ASP.NET", "PHP", "C#", "SQL"] },
+      {
+        "label": "Responsibilities",
+        "items": []
+      }
+    ]
   }
 ]

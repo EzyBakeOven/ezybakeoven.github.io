@@ -34,7 +34,7 @@ export default function CareerTimeline() {
                   {career.organisationName}
                 </Typography>
                 <Typography>{career.role}</Typography>
-                <CareerTabs career={career}></CareerTabs>
+                <CareerTabs careerTabProps={career}></CareerTabs>
               </Paper>
             </TimelineContent>
           </TimelineItem>

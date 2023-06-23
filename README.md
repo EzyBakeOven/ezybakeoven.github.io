@@ -7,13 +7,11 @@
   Resume Site
 </h1>
 
-This branch is the main development branch for my online Resume. Built files are put into the master branch which is deployed by Github Pages.
+This branch is the main development branch for my online Resume. Built files are put into the deployment branch which is deployed by Github Pages.
 
 ## 🚀 Quick start
 
 1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
 
     ```shell
     npm run develop
@@ -24,8 +22,6 @@ This branch is the main development branch for my online Resume. Built files are
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
@@ -40,4 +36,4 @@ This branch is the main development branch for my online Resume. Built files are
 ## Deploying to Github Pages
 
 1. Build locally in prod mode
-2. Push built files to master. 
+2. Push built files to deployment branch. 
