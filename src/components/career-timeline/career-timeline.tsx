@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FC } from "react"
 import Timeline from "@mui/lab/Timeline"
 import TimelineItem from "@mui/lab/TimelineItem"
 import TimelineSeparator from "@mui/lab/TimelineSeparator"
@@ -8,19 +8,19 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent"
 import TimelineDot from "@mui/lab/TimelineDot"
 import Paper from "@mui/material/Paper"
 import Typography from "@mui/material/Typography"
-import CareerHistory from "../../data/career-history.json"
+import "./career-timeline.css"
+import { CareerHistory } from "../../data/model/career-history.interface"
 import CareerTabs from "./career-tabs"
-import "./career-timeline.css";
 
-export default function CareerTimeline() {
+const CareerTimeline: FC<CareerHistory> = (props) => {
   return (
     <Timeline position="alternate">
-      {CareerHistory.map((career, index) => {
+      {props.workHistory.map((job, index) => {
         return (
           <TimelineItem key={index}>
             <TimelineOppositeContent color="text.secondary">
-              {career.duration}
-              <p>{career.dates}</p>
+              {job.duration}
+              <p>{job.dates}</p>
             </TimelineOppositeContent>
 
             <TimelineSeparator>
@@ -31,10 +31,10 @@ export default function CareerTimeline() {
             <TimelineContent>
               <Paper elevation={24} className="experience-card">
                 <Typography variant="h6" component="h1">
-                  {career.organisationName}
+                  {job.organisationName}
                 </Typography>
-                <Typography>{career.role}</Typography>
-                <CareerTabs career={career}></CareerTabs>
+                <Typography>{job.role}</Typography>
+                <CareerTabs career={job}></CareerTabs>
               </Paper>
             </TimelineContent>
           </TimelineItem>
@@ -43,3 +43,5 @@ export default function CareerTimeline() {
     </Timeline>
   )
 }
+
+export default CareerTimeline;

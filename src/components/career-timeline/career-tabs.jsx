@@ -4,7 +4,6 @@ import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 import Box from "@mui/material/Box"
 import OutlinedCard from "./career-experience-card"
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import "./career-tabs.css"
 
 function TabPanel(props) {
@@ -29,18 +28,19 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 }
 
-function a11yProps(index) {
+function a11yProps(tabIndex) {
   return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    id: `simple-tab-${tabIndex}`,
+    "aria-controls": `simple-tabpanel-${tabIndex}`,
   }
 }
-export default function CareerTabs(career) {
-  const [value, setValue] = React.useState(0)
+export default function CareerTabs(careerTab) {
+  const [selectedTabIndex, setSelectedTabIndex] = React.useState(0)
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue)
+  const handleChange = (event, newIndex) => {
+    setSelectedTabIndex(newIndex)
   }
+  console.log(careerTab.career)
 
   return (
     <Box sx={{ width: "100%" }}>
@@ -48,25 +48,20 @@ export default function CareerTabs(career) {
         <Tabs
           textColor="primary"
           indicatorColor="primary"
-          value={value}
+          value={selectedTabIndex}
           onChange={handleChange}
           aria-label="tabs that outline my experience."
         >
-          <Tab label="Experience" {...a11yProps(0)} />
-          {career.career.awards[0] !== undefined && (
-            <Tab className="award-card-parent" label="Awards" {...a11yProps(1)} />
-          )}
+          {careerTab.career.tabs.map((tab, index) => (
+            <Tab label={tab.label} {...a11yProps(index)} />
+          ))}
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        <OutlinedCard experience={career.career.experience}></OutlinedCard>
-      </TabPanel>
-      {career.career.awards[0] !== undefined && (
-        <TabPanel value={value} index={1} className="award-card">
-          <EmojiEventsIcon className="award-icon"></EmojiEventsIcon>
-          <p className="award-content">{career.career.awards[0]}</p>
+      {careerTab.career.tabs.map((tab, index) => (
+        <TabPanel value={selectedTabIndex} index={index}>
+          <OutlinedCard experience={tab.items}></OutlinedCard>
         </TabPanel>
-      )}
+      ))}
     </Box>
   )
 }
