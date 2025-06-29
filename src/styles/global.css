@@ -1,3 +1,133 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Blog post content styles */
+.blog-post-content {
+  @apply max-w-none;
+}
+
+.blog-post-content h1 {
+  @apply text-3xl font-bold mb-4 mt-8;
+}
+
+.blog-post-content h2 {
+  @apply text-2xl font-semibold mb-3 mt-6;
+}
+
+.blog-post-content h3 {
+  @apply text-xl font-semibold mb-2 mt-4;
+}
+
+.blog-post-content h4 {
+  @apply text-lg font-semibold mb-2 mt-4;
+}
+
+.blog-post-content p {
+  @apply mb-4 leading-relaxed;
+}
+
+.blog-post-content ul {
+  @apply mb-4 pl-6;
+}
+
+.blog-post-content ol {
+  @apply mb-4 pl-6;
+}
+
+.blog-post-content li {
+  @apply mb-1;
+}
+
+.blog-post-content blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+}
+
+.blog-post-content code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+}
+
+.blog-post-content pre {
+  @apply bg-gray-900 text-white p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.blog-post-content pre code {
+  @apply bg-transparent p-0;
+}
+
+.blog-post-content a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+.blog-post-content img {
+  @apply max-w-full h-auto rounded-lg my-4;
+}
+
+.blog-post-content table {
+  @apply w-full border-collapse border border-gray-300 mb-4;
+}
+
+.blog-post-content th,
+.blog-post-content td {
+  @apply border border-gray-300 px-3 py-2 text-left;
+}
+
+.blog-post-content th {
+  @apply bg-gray-100 font-semibold;
+}
+
+/* Prism.js theme overrides */
+.blog-post-content .token.comment,
+.blog-post-content .token.prolog,
+.blog-post-content .token.doctype,
+.blog-post-content .token.cdata {
+  @apply text-gray-500;
+}
+
+.blog-post-content .token.punctuation {
+  @apply text-gray-400;
+}
+
+.blog-post-content .token.property,
+.blog-post-content .token.tag,
+.blog-post-content .token.boolean,
+.blog-post-content .token.number,
+.blog-post-content .token.constant,
+.blog-post-content .token.symbol,
+.blog-post-content .token.deleted {
+  @apply text-red-400;
+}
+
+.blog-post-content .token.selector,
+.blog-post-content .token.attr-name,
+.blog-post-content .token.string,
+.blog-post-content .token.char,
+.blog-post-content .token.builtin,
+.blog-post-content .token.inserted {
+  @apply text-green-400;
+}
+
+.blog-post-content .token.operator,
+.blog-post-content .token.entity,
+.blog-post-content .token.url,
+.language-css .token.string,
+.style .token.string {
+  @apply text-yellow-400;
+}
+
+.blog-post-content .token.atrule,
+.blog-post-content .token.attr-value,
+.blog-post-content .token.keyword {
+  @apply text-purple-400;
+}
+
+.blog-post-content .token.function,
+.blog-post-content .token.class-name {
+  @apply text-blue-400;
+}
+
+.blog-post-content .token.regex,
+.blog-post-content .token.important,
+.blog-post-content .token.variable {
+  @apply text-orange-400;
+}

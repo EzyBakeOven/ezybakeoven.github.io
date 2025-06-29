@@ -7,11 +7,13 @@
 
 import React from "react"
 import Header from "./particle-header/header"
+import Navigation from "./navigation/navigation"
 import "./layout.css"
 
 export default function Layout({ children }) {
   return (
     <>
+      <Navigation />
       <Header id="particle-header" />
       <main className="main-content">
         {children}
