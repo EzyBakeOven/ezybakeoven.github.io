@@ -29,8 +29,8 @@ const CareerTimeline: FC<CareerHistory> = (props) => {
             </TimelineSeparator>
 
             <TimelineContent>
-              <Paper elevation={24} className="experience-card">
-                <Typography variant="h6" component="h1">
+              <Paper elevation={24} className="experience-card" sx={{ p: 3, width: '100%', boxSizing: 'border-box', maxWidth: '100%' }}>
+                <Typography variant="h6" component="h1" sx={{ color: '#89b4fa' }}>
                   {job.organisationName}
                 </Typography>
                 <Typography>{job.role}</Typography>

@@ -35,30 +35,58 @@ function a11yProps(tabIndex) {
   }
 }
 export default function CareerTabs(careerTab) {
+  const theme = require('@mui/material/styles').useTheme ? require('@mui/material/styles').useTheme() : null;
   const [selectedTabIndex, setSelectedTabIndex] = React.useState(0)
 
   const handleChange = (event, newIndex) => {
     setSelectedTabIndex(newIndex)
   }
-  console.log(careerTab.career)
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+    <Box sx={{ width: '100%', maxWidth: '100vw', overflowX: 'auto' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider', maxWidth: '100vw', overflowX: 'auto' }}>
         <Tabs
           textColor="primary"
           indicatorColor="primary"
           value={selectedTabIndex}
           onChange={handleChange}
           aria-label="tabs that outline my experience."
+          variant="scrollable"
+          scrollButtons="auto"
+          sx={{
+            fontFamily: theme ? theme.typography.fontFamily : undefined,
+            fontWeight: theme ? theme.typography.h2.fontWeight : 600,
+            fontSize: theme ? theme.typography.h2.fontSize : '1.5rem',
+            color: theme ? theme.palette.text.primary : undefined,
+            maxWidth: '100vw',
+            overflowX: 'auto',
+          }}
         >
           {careerTab.career.tabs.map((tab, index) => (
-            <Tab label={tab.label} {...a11yProps(index)} />
+            <Tab
+              key={tab.label}
+              label={<Box sx={{
+                fontFamily: theme ? theme.typography.fontFamily : undefined,
+                fontWeight: theme ? theme.typography.h2.fontWeight : 600,
+                fontSize: theme ? theme.typography.h2.fontSize : '1.5rem',
+                color: theme ? theme.palette.text.primary : undefined,
+                textTransform: 'none',
+              }}>{tab.label}</Box>}
+              {...a11yProps(index)}
+              sx={{
+                minHeight: 48,
+                fontFamily: theme ? theme.typography.fontFamily : undefined,
+                fontWeight: theme ? theme.typography.h2.fontWeight : 600,
+                fontSize: theme ? theme.typography.h2.fontSize : '1.5rem',
+                color: theme ? theme.palette.text.primary : undefined,
+                textTransform: 'none',
+              }}
+            />
           ))}
         </Tabs>
       </Box>
       {careerTab.career.tabs.map((tab, index) => (
-        <TabPanel value={selectedTabIndex} index={index}>
+        <TabPanel value={selectedTabIndex} index={index} key={tab.label}>
           <OutlinedCard experience={tab.items}></OutlinedCard>
         </TabPanel>
       ))}

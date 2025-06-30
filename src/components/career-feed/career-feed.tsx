@@ -1,6 +1,8 @@
 import React, { FC } from "react"
 import { CareerHistory } from "../../data/model/career-history.interface"
 import WorkHistoryCard from "./work-history-card"
+import Box from "@mui/material/Box"
+import Grid from "@mui/material/Grid"
 
 /**
  * Mobile View for past Work History
@@ -9,10 +11,10 @@ import WorkHistoryCard from "./work-history-card"
  */
 const CareerFeed: FC<CareerHistory> = props => {
   return (
-    <div className="grid-cols-1 w-full">
+    <Grid container direction="column" spacing={2} sx={{ width: '100%' }}>
       {props.workHistory.map((job, index) => {
         return (
-          <div className="my-5">
+          <Grid item key={index}>
             <WorkHistoryCard
               organisationName={job.organisationName}
               logo={job.logo}
@@ -20,11 +22,11 @@ const CareerFeed: FC<CareerHistory> = props => {
               duration={job.duration}
               role={job.role}
               tabs={job.tabs}
-            ></WorkHistoryCard>
-          </div>
+            />
+          </Grid>
         )
       })}
-    </div>
+    </Grid>
   )
 }
 

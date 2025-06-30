@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const Navigation = () => {
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'rgba(13, 71, 161, 0.9)', backdropFilter: 'blur(10px)' }}>
+    <AppBar position="static" sx={{ backgroundColor: (theme) => theme.palette.background.paper, backdropFilter: 'blur(10px)' }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -18,7 +18,7 @@ const Navigation = () => {
             to="/"
             sx={{ 
               '&:hover': { 
-                backgroundColor: 'rgba(255, 255, 255, 0.1)' 
+                backgroundColor: (theme) => theme.palette.action.hover 
               } 
             }}
           >
@@ -30,7 +30,7 @@ const Navigation = () => {
             to="/blog"
             sx={{ 
               '&:hover': { 
-                backgroundColor: 'rgba(255, 255, 255, 0.1)' 
+                backgroundColor: (theme) => theme.palette.action.hover 
               } 
             }}
           >
