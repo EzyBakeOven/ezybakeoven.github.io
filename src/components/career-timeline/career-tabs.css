@@ -1,25 +1,60 @@
+/* Mobile-first responsive design */
 .award-card {
-  display: inline-flex;
-  margin: 1em;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
   width: 100%;
+  max-width: 100%;
 }
 
 .award-card-parent {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
 }
 
 .award-icon {
-    color: gold;
-    float: left;
-    /* background-color: gray;
-    border-radius: 50%;
-    box-shadow:
-      0 0 6px 3px yellow,
-      0 0 10px 6px gold,
-      0 0 14px 9px goldenrod; */
+  color: gold;
+  font-size: 1.2rem;
 }
 
 .award-content {
-    float: right;
+  flex: 1;
+  padding-left: 8px;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 600px) {
+  .award-card {
+    flex-direction: row;
+    margin: 16px 0;
+    align-items: flex-start;
+  }
+  
+  .award-card-parent {
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .award-icon {
+    font-size: 1.5rem;
+  }
+  
+  .award-content {
+    padding-left: 16px;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 960px) {
+  .award-card {
+    margin: 1em;
+    max-width: 345px;
+  }
+  
+  .award-card-parent {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
 }

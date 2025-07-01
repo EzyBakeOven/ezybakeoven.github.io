@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 import Box from "@mui/material/Box"
+import { useTheme, useMediaQuery } from "@mui/material"
 import OutlinedCard from "./career-experience-card"
 import "./career-tabs.css"
 
@@ -17,7 +18,7 @@ function TabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 2 }}>{children}</Box>}
+      {value === index && <Box sx={{ p: { xs: 1, sm: 2 } }}>{children}</Box>}
     </div>
   )
 }
@@ -34,8 +35,11 @@ function a11yProps(tabIndex) {
     "aria-controls": `simple-tabpanel-${tabIndex}`,
   }
 }
+
 export default function CareerTabs(careerTab) {
-  const theme = require('@mui/material/styles').useTheme ? require('@mui/material/styles').useTheme() : null;
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'))
   const [selectedTabIndex, setSelectedTabIndex] = React.useState(0)
 
   const handleChange = (event, newIndex) => {
@@ -43,43 +47,57 @@ export default function CareerTabs(careerTab) {
   }
 
   return (
-    <Box sx={{ width: '100%', maxWidth: '100vw', overflowX: 'auto' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', maxWidth: '100vw', overflowX: 'auto' }}>
+    <Box sx={{ 
+      width: '100%', 
+      maxWidth: '100%',
+      mt: { xs: 1, sm: 2 }
+    }}>
+      <Box sx={{ 
+        borderBottom: 1, 
+        borderColor: 'divider',
+        width: '100%'
+      }}>
         <Tabs
           textColor="primary"
           indicatorColor="primary"
           value={selectedTabIndex}
           onChange={handleChange}
-          aria-label="tabs that outline my experience."
-          variant="scrollable"
+          aria-label="Career experience tabs"
+          variant={isMobile ? "scrollable" : "standard"}
           scrollButtons="auto"
+          allowScrollButtonsMobile
           sx={{
-            fontFamily: theme ? theme.typography.fontFamily : undefined,
-            fontWeight: theme ? theme.typography.h2.fontWeight : 600,
-            fontSize: theme ? theme.typography.h2.fontSize : '1.5rem',
-            color: theme ? theme.palette.text.primary : undefined,
-            maxWidth: '100vw',
-            overflowX: 'auto',
+            width: '100%',
+            minHeight: { xs: 40, sm: 48 },
+            '& .MuiTabs-flexContainer': {
+              gap: { xs: 0, sm: 1 }
+            }
           }}
         >
           {careerTab.career.tabs.map((tab, index) => (
             <Tab
               key={tab.label}
-              label={<Box sx={{
-                fontFamily: theme ? theme.typography.fontFamily : undefined,
-                fontWeight: theme ? theme.typography.h2.fontWeight : 600,
-                fontSize: theme ? theme.typography.h2.fontSize : '1.5rem',
-                color: theme ? theme.palette.text.primary : undefined,
-                textTransform: 'none',
-              }}>{tab.label}</Box>}
+              label={tab.label}
               {...a11yProps(index)}
               sx={{
-                minHeight: 48,
-                fontFamily: theme ? theme.typography.fontFamily : undefined,
-                fontWeight: theme ? theme.typography.h2.fontWeight : 600,
-                fontSize: theme ? theme.typography.h2.fontSize : '1.5rem',
-                color: theme ? theme.palette.text.primary : undefined,
+                minHeight: { xs: 40, sm: 48 },
+                fontSize: { 
+                  xs: '0.75rem',    // 12px on mobile
+                  sm: '0.875rem',   // 14px on tablet
+                  md: '1rem'        // 16px on desktop
+                },
+                fontWeight: { xs: 500, sm: 600 },
                 textTransform: 'none',
+                color: theme.palette.text.primary,
+                minWidth: { xs: 'auto', sm: 90 },
+                padding: { 
+                  xs: '8px 12px', 
+                  sm: '12px 16px' 
+                },
+                '&.Mui-selected': {
+                  color: theme.palette.primary.main,
+                  fontWeight: 600
+                }
               }}
             />
           ))}

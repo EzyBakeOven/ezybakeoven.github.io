@@ -2,3 +2,57 @@
     padding: 10px;
 }
 
+.career-timeline {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .career-timeline {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .career-timeline .MuiTimelineItem-root {
+        min-height: auto;
+        margin-bottom: 16px;
+    }
+    
+    .career-timeline .MuiTimelineContent-root {
+        padding-left: 16px;
+        padding-right: 0;
+        margin-right: 0;
+        width: calc(100% - 40px);
+    }
+    
+    .career-timeline .MuiTimelineSeparator-root {
+        margin-right: 16px;
+    }
+    
+    .experience-card {
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: calc(100vw - 80px) !important;
+        box-sizing: border-box;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .career-timeline .MuiTimelineContent-root {
+        padding-left: 8px;
+        width: calc(100% - 32px);
+    }
+    
+    .career-timeline .MuiTimelineSeparator-root {
+        margin-right: 8px;
+    }
+    
+    .experience-card {
+        max-width: calc(100vw - 60px) !important;
+        padding: 12px !important;
+    }
+}
+

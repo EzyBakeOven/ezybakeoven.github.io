@@ -8,7 +8,7 @@ author: "Matt Hoy"
 
 # Hello World! 👋
 
-Welcome to my new blog! I'm excited to start sharing my thoughts, experiences, and insights about software engineering, technology, and my career journey.
+Welcome to my blog! I'm excited to start sharing my thoughts, experiences, and insights about software engineering, technology, and my career journey.
 
 ## What to Expect
 
@@ -22,7 +22,7 @@ In this blog, I'll be writing about:
 
 ## About Me
 
-I'm a Senior Software Engineer based in Adelaide, South Australia, with experience in various technologies and domains. I'm passionate about writing clean, maintainable code and helping others grow in their software engineering careers.
+I'm a Senior Software Engineer based in Adelaide, South Australia, with experience in a lot of different domains, I am focussed on a breadth of knowledge rather than specializing in a specific area like Java (but I love Java). My number one tenant is that there are no solutions only tradeoffs I try to be passionate about writing clean, maintainable code and helping others grow in their software engineering careers.
 
 ## Why I Started This Blog
 
@@ -33,26 +33,5 @@ After years of consuming content from the developer community, I wanted to give 
 Feel free to reach out to me on [GitHub](https://github.com/ezybakeoven) or connect with me on LinkedIn. I'm always open to discussions about technology, software engineering, or just saying hello!
 
 ---
-
-*This blog is built with Gatsby and deployed on GitHub Pages. I'll be sharing more about the technical setup in future posts.*
-
-## Code Example
-
-Here's a simple React component to demonstrate syntax highlighting:
-
-```jsx
-import React from 'react';
-
-const Greeting = ({ name }) => {
-  return (
-    <div className="greeting">
-      <h1>Hello, {name}!</h1>
-      <p>Welcome to my blog.</p>
-    </div>
-  );
-};
-
-export default Greeting;
-```
 
 Stay tuned for more posts coming soon! 🚀 
