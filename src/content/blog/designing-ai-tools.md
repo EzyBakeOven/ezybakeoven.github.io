@@ -1,6 +1,6 @@
 ---
 title: "Designing AI Tools: How to make tools that have impact"
-date: "2025-01-26"
+date: "2025-08-09"
 description: "A practical guide to designing AI tools that solve real problems, focusing on user experience, technical architecture, and delivering measurable value."
 tags: ["AI", "design", "tools", "UX", "development", "guide"]
 author: "Matt Hoy"
