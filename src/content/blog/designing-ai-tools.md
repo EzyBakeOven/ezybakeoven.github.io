@@ -8,11 +8,17 @@ author: "Matt Hoy"
 
 # Designing AI Tools: From Concept to Implementation
 
+I had a particular problem: how do you create an application that allows for AI to make changes, but for a human to be in the loop to either approve or change what the AI did or suggested? I had thought of a commit plan flow where the AI would propose a change, the user would approve it, then the AI would act. But how do you actually do that? Do you just make heaps of duplicates? Change the duplicate then delete it once it's been approved? What if the user abandons mid-session and then we just have heaps of duplicates?
+
+I eventually landed on just closing the loop. AI makes the change, no human in the loop at all. The human just slows down the change anyway. Wouldn't it be better if you just said "make this change" and it did it? I was wrong. My users didn't want to use the tool at all.
+
 Building AI tools that actually work in practice requires more than just connecting an LLM to a MCP server. After shipping several AI-powered tools that **eventually** delivered real ROI, I've learned some key lessons about developing AI tools for in-house projects. Here's what I wish I'd known when I started.
 
 ## Start with the Problem, Not the Technology
 
 The biggest mistake I see teams make is falling in love with AI capabilities rather than focusing on user problems. Your first question shouldn't be "What can AI do?" but rather "What friction exists in my users' workflows?"
+
+This is one of the mistakes I made, I immediately went straight to what can I automate with AI in a chat interface. Instead of trying to solve real problems that my users were facing. I went straight to making an MCP server for my backend and hooking an LLM to it. When years of software engineering principles have said, start with user requirements, I made the mistake of getting mixed up in the hype.
 
 AI tools succeed when they remove cognitive load, not when they showcase impressive technology. The best AI features often feel invisible—users accomplish their goals faster without thinking about the AI powering it.
 
@@ -22,7 +28,9 @@ This is a key takeaway. I started developing a tool that I originally thought wo
 
 I started pondering why. And it occurred to me when someone told me to try Claude CLI and I thought I like being in the loop. I don't like background agents, I like being behind the wheel. And click—there it was. They felt the same. I threw out the old tools that actually updated the data. I started making a new UI that focused on putting tools back into human hands and keeping them in control, but still being powered by AI. AI no longer updated the data, **it updated the UI**.
 
-"Remove inactive products from this set" became "highlight all inactive products in this set." Delete button is clicked by human. Data is updated in the backend. All of a sudden, it started getting used, and people thought it was amazing. It became a tool that made doing their job easier, instead of trying to do their job.
+"Remove inactive products from this set" became "highlight all inactive products in this set." Delete button is clicked by human. Data is updated in the backend via a REST API. All of a sudden, it started getting used, and people thought it was amazing. It became a tool that made doing their job easier, instead of trying to do their job.
+
+One of its strongest features that have really made an impact is how useful AI validation can be. We have custom validation rules that users can tell the AI to remember. Because our tools are used for a wide variety of different verticals, from Internet, to Banking. And the schema is completely customizable, validation has always been a weak point in our system because we just don't know what fields our users might add. This customizable AI validation was such a game changer for data quality. Users could now set validation rules, and when the user is done editing the AI checks the state, before the user saves it in the backend.
 
 ## Design Principles for AI Tools
 
@@ -30,7 +38,7 @@ I started pondering why. And it occurred to me when someone told me to try Claud
 
 Everyone defaults to building chat interfaces, but they're often the wrong choice. Chat works best when:
 - The conversation itself has value
-- Users can just fire and forget, ask and it's done.
+- Users can just fire and forget—ask and it's done.
 
 But consider these alternatives:
 - **Contextual suggestions** - AI recommendations that appear where users already work
