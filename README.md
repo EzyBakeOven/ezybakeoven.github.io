@@ -12,3 +12,13 @@ The goal is to stay close to the web platform:
 - No magic
 
 Just standards that ship in the browser.
+
+## Running Locally
+
+```bash
+```bash
+python -m http.server 3000
+```
+```
+```
+```
