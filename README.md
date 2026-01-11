@@ -16,9 +16,5 @@ Just standards that ship in the browser.
 ## Running Locally
 
 ```bash
-```bash
 python -m http.server 3000
-```
-```
-```
 ```
