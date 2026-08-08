@@ -1,3 +1,65 @@
 #navbar-root {
   min-height: 60px;
 }
+
+/* ================================
+   Profile Card
+   ================================ */
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 320px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  background: var(--ctp-mantle, #181825);
+  border: 1px solid var(--ctp-surface1, #45475a) !important;
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-md, 0 6px 16px rgba(0,0,0,.35));
+}
+
+.profile-card__avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--ctp-mauve, #cba6f7) !important;
+}
+
+.profile-card__name {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.profile-card__title {
+  margin: 0;
+  color: var(--ctp-subtext0);
+}
+
+.profile-card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.profile-card__link {
+  padding: 0.5rem 1.25rem;
+  background: var(--ctp-surface0);
+  border-radius: var(--radius-sm);
+  color: var(--ctp-text);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.profile-card__link:hover {
+  background: var(--ctp-surface1);
+  text-decoration: none;
+  color: var(--ctp-mauve);
+}

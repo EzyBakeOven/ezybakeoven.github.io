@@ -13,7 +13,7 @@ The goal is to stay close to the web platform:
 
 Just standards that ship in the browser.
 
-## Running Locally
+## Running a Dev Server Locally
 
 ```bash
 python -m http.server 3000
